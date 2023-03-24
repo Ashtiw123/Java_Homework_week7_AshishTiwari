@@ -18,7 +18,7 @@ public class Prog4NoOfDayInMonth {
     public static boolean isLeapYear(int year) {
         boolean b;
         if (year >= 1 && year <= 9999) {
-            b = (year % 4 == 0) && (year % 100 == 0) || (year % 400 == 0);
+            b = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
             System.out.println(year + " is a leap year.");
         } else {
             b = false;
@@ -65,7 +65,4 @@ public class Prog4NoOfDayInMonth {
         return days;
 
     }
-
-
-
 }
